@@ -11,6 +11,21 @@ window.addEventListener("DOMContentLoaded", async function () {
   // ==========================================================================
   // Start context
   // ==========================================================================
+
+  function interpolate(xInterval, yInterval) {
+    const [x0, x1] = xInterval;
+    const [y0, y1] = yInterval;
+
+    return (xA) => {
+      if (xA > x1) xA = x1;
+      else if (xA < x0) xA = x0;
+
+      const yA = y0 + (y1 - y0) * ((xA - x0) / (x1 - x0));
+
+      return yA;
+    };
+  }
+
   const context = new AudioContext();
 
   const audioElement = document.getElementById("player");
@@ -23,6 +38,8 @@ window.addEventListener("DOMContentLoaded", async function () {
   let source = null;
 
   let frequencyData = null;
+
+  const toPx = interpolate([0, 255], [0, 500]);
 
   audioElement.addEventListener("canplay", function () {
     source = context.createMediaElementSource(audioElement);
@@ -52,7 +69,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
       // Update the visualisation
       bars.forEach((bar, index) => {
-        bar.style.height = frequencyData[index] + "px";
+        bar.style.height = toPx(frequencyData[index]) + "px";
       });
 
       // Schedule the next update
