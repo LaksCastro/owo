@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GraphQL</title>
+</head>
+
+<body>
+  <button onclick="letsPlay()">
+    Bora vê
+  </button>
+  <div>
+
+  </div>
+  <script>
+    const root = "https://api.github.com/graphql";
+    const token = "??";
+
+    const query = `
+      query GetUser($ownerUsername: String!, $repoName: String!) {
+        repository(name: $repoName, owner: $ownerUsername) {
+          databaseId
+        }
+      }
+    `
+
+    async function letsPlay() {
+      const result = await fetch(root, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          "Authorization": "Bearer " + token
+        },
+        body: JSON.stringify({
+          query,
+          variables: {
+            ownerUsername: "Shawn-Shan",
+            repoName: "fawkes"
+          }
+        })
+      });
+
+      console.log((await result.json()));
+    }
+
+    // const root = "https://api.github.com/graphql";
+    // const token = "??";
+
+    // const query = `
+    //   mutation AddStar($userId: String, $repoId: String!) {
+    //     addStar(input: {
+    //       clientMutationId: $userId, starrableId: $repoId
+    //     }) {
+    //       clientMutationId
+    //     }
+    //   }
+    // `
+
+    // async function letsPlay() {
+    //   const result = await fetch(root, {
+    //     method: "POST",
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       'Accept': 'application/json',
+    //       "Authorization": "Bearer " + token
+    //     },
+    //     body: JSON.stringify({
+    //       query,
+    //       variables: {
+    //         userId: "LaksCastro",
+    //         repoId: "264782257"
+    //       }
+    //     })
+    //   });
+
+    //   console.log((await result.json()));
+    // }
+  </script>
+</body>
+
+</html>
