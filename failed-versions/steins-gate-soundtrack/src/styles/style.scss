@@ -1,0 +1,44 @@
+@import "./player.scss";
+@import "./layout.scss";
+@import "./variables.scss";
+
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Oxanium', sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar { 
+  display: none; 
+}
+html, body{
+  width: 100%;
+  background: $background;
+  overscroll-behavior-y: contain;
+}
+img{
+  user-select: none;
+  pointer-events: none;
+}
+.mdc-top-app-bar{
+  background: $content;
+}
+.mdc-icon-button{
+  &.use-custom-style{
+    transition: all .2s ease-in-out;
+    border-radius: 50%;
+    margin: 0 4px;
+    &:hover{
+      background: $content-hovered;
+    }
+    &:active{
+      background: $content-lightness;
+    }
+    background: $content;
+  }
+}

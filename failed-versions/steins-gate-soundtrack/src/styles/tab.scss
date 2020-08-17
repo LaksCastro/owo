@@ -1,0 +1,29 @@
+#tab-wrapper{
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: auto;
+}
+.tab-item{
+    width: 100%;
+    max-width: 270px;
+    min-width: 120px;
+
+    transition: all .2s ease-in-out;
+
+    padding: 12px 24px;
+    color: $color-light;
+
+    text-align: center;
+    &:hover{
+        background: $content-hovered;
+    }
+    &:active{
+        background: $content-lightness;
+    }
+    &.active{
+        color: $color-light;
+        background: $content-lightness;
+    }
+}

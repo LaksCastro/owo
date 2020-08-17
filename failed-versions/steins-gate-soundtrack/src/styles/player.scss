@@ -1,0 +1,359 @@
+@import "./variables.scss";
+
+
+// STATE COLLAPSED ====================
+
+.state-span{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $content;
+    box-shadow: -1px -5px 10px 5px $background;
+    transition: all .2s ease-in-out;
+    &.collapsed{
+        height: 59px;
+    }
+    &.expanded{
+        height: 100%;
+    }
+}
+.player-wrapper{
+    cursor: pointer;
+
+    position: relative;
+    
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+
+    &::after{
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        background: rgba(54, 57, 62, 0.5);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        transition: all .4s ease-in-out;
+        z-index: -2;
+        border-top: 2px var(--mdc-theme-secondary) solid;
+        border-bottom: 2px var(--mdc-theme-secondary) solid;
+
+        will-change: width;
+    }
+    &:hover{
+        &::after{
+            width: 100%;
+        }
+    }
+}
+.p-container{
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+}
+#p-data{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+#p-thumb{
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+#p-title, #p-description{
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#p-title{
+    color: $color;
+    font-size: 0.9em;
+}
+#p-description{
+    color: $color-light;
+    font-size: 0.7em;
+}
+.p-vol-wrapper{
+    width: 100%;
+    max-width: 950px;
+}
+#p-wave-wrapper{
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    height: 100%;
+
+    width: 100%;
+
+    z-index: -1;
+
+    & .p-single-wave{
+        background: rgba(66, 69, 73, 0.5);
+    }
+}
+#p-wave-container{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.p-single-wave{
+    width: 16px;
+    margin: 0 4px;
+    transition: all .1s ease-in-out;
+}
+
+// ============== EXPANDED STATE ================
+
+#p-expanded-wave-wrapper{
+    transition: all .4s ease-in-out;
+    width: 100%;
+    height: 350px;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+
+    & .p-single-wave{
+        background: rgba(66, 69, 73, 0.2);
+    }
+}
+.p-expanded-top-bar-wrapper{
+    width: 100%;
+
+    box-shadow: 2px 2px 5px 1px transparent;
+
+    display: flex;
+    justify-content: center;
+
+    border-bottom: 5px solid transparent;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+        background: $content;
+        box-shadow: 2px 2px 5px 1px $content;
+    }
+}
+.p-expanded-top-bar-container{
+    padding: 2px 1.5rem;
+    width: 100%;
+    height: 100%;
+    max-width: 950px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p-expanded-body{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#p-expanded-background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+
+    filter: blur(8px);
+}
+
+#p-expanded-vol-slider-wrapper{
+    width: 100%;
+    padding: 12px 2rem;
+    padding-bottom: 4px;
+}
+#p-expanded-vol-icons-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.p-expanded-data{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.p-expanded-data-img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+}
+.p-expanded-data-title{
+    color: $color;
+    padding: 2rem 0;
+}
+.p-expanded-data-description{
+    color: $color-light;
+}
+.p-expanded-controls{
+    width: 100%;
+    background: linear-gradient(
+        to top, 
+        rgba(0,0,0,0.9), 
+        rgba(0,0,0,0.6), 
+        rgba(0,0,0,0.3), 
+        transparent
+    );
+
+    padding: 2rem 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.p-expanded-extra-actions{
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    justify-content: space-between;
+    
+    *{
+        margin: 2px;
+    }
+}
+.p-expanded-duration{
+    width: 100%;
+    padding: 1rem;
+}
+
+.p-expanded-time-display{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#p-expanded-time-init{
+    color: $color;
+}
+#p-expanded-time-end{
+    color: $color;
+}
+.p-expanded-actions{
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    justify-content: space-between;
+
+    *{
+        margin: 2px;
+    }
+}
+
+// PLAYER VIWEWPORT/WRAPPER ================
+
+.state-collapsed{
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+    z-index: 3000;
+    #p-wave-container{
+        height: 60px;
+    }
+}
+.state-expanded{
+    z-index: 5000;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    z-index: 5000;
+
+    #p-wave-container{
+        height: 100%;
+    }
+}
+
+// ==============  MATERIAL DESIGN ================
+
+.mdc-icon-button{
+    color: $color;
+}
+
+@media screen and (max-width: 558px){
+    #p-random{
+        display: none;
+    }
+}
+@media screen and (max-width: 510px){
+    #p-loop{
+        display: none;
+    }
+}
+@media screen and (max-width: 468px){
+    #p-title, #p-description{
+        max-width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (max-width: 398px){
+    #p-thumb{
+        display: none;
+    }
+    .p-viewport-collapsed{
+        height: 76px;
+    }
+}
+@media screen and (max-width: 350px){
+    #p-prev{
+        display: none;
+    }
+}
+
+.hide{
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.show{
+    transition: all .3s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}

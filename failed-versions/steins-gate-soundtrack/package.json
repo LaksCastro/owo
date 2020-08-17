@@ -1,0 +1,51 @@
+{
+  "name": "webpack-4-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for modern javascript development using webpack 4",
+  "author": "Fin Mavis",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "brotli-webpack-plugin": "^1.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.0.1",
+    "css-loader": "^3.4.1",
+    "cssnano": "^4.1.0",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "purgecss-webpack-plugin": "^1.6.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
+    "terser-webpack-plugin": "^2.3.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open --config=config/webpack.dev.js",
+    "build": "webpack --config=config/webpack.prod.js"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "@material/slider": "^5.1.0",
+    "@material/tab-bar": "^5.1.0",
+    "core-js": "3",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
+    "hammerjs": "^2.0.8"
+  },
+  "browserslist": [
+    "> 1%",
+    "not ie <= 9",
+    "last 2 versions"
+  ]
+}

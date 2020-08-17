@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel='stylesheet' href='https://unpkg.com/material-components-web/dist/material-components-web.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+  <title>Soundtracks - Steins;Gate</title>
+</head>
+
+<body>
+  <header class="top-bar-wrapper">
+    <div id="sg-logo">
+      <h1 id="sg-main-name" class="steins-gate">Steins;<span class="steins-gate sg-main-letter">G</span>ate</h1>
+    </div>
+    <button class="mdc-icon-button material-icons">search</button>
+  </header>
+
+  <main class="main-content">
+    <section class="song-viewport">
+      <div class="s-category-wrapper">
+        <div class="s-category-container"></div>
+      </div>
+      <div class="s-general-actions">
+        <button id="g-random" notransparent class="use-custom-style mdc-icon-button material-icons">shuffle</button>
+        <button id="g-start" notransparent class="use-custom-style mdc-icon-button material-icons">play_arrow</button>
+      </div>
+      <div class="song-list-wrapper"></div>
+    </section>
+  </main>
+
+  <div class="state-span collapsed">
+  </div>
+  <div class="state-collapsed show">
+    <div id="p-wave-wrapper">
+      <div id="p-wave-container"></div>
+    </div>
+    <div class="player-wrapper">
+      <div class="p-container">
+        <div id="p-data">
+          <img src="/assets/fatima.jpg" alt="Hacking To The Gate" id="p-thumb">
+          <div class="p-info">
+            <h3 id="p-title"></h3>
+            <p id="p-description"></p>
+          </div>
+        </div>
+        <div class="p-actions">
+          <button id="p-random" class="mdc-icon-button material-icons">call_made</button>
+          <button id="p-prev" class="mdc-icon-button material-icons">skip_previous</button>
+          <button id="p-play" class="mdc-icon-button material-icons">play_arrow</button>
+          <button id="p-next" class="mdc-icon-button material-icons">skip_next</button>
+          <button id="p-loop" class="mdc-icon-button material-icons">repeat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="state-expanded hide">
+    <div id="p-expanded-wave-wrapper"></div>
+
+    <div id="p-expanded-top-bar-wrapper" class="p-expanded-top-bar-wrapper">
+      <div class="p-expanded-top-bar-container">
+        <button id="p-expanded-back-button" class="mdc-icon-button material-icons">expand_more</button>
+        <button id="p-expanded-vol" class="mdc-icon-button material-icons">headset</button>
+      </div>
+    </div>
+
+    <div class="p-expanded-body">
+      <div id="p-expanded-background-image"></div>
+
+      <div id="p-expanded-vol-slider-wrapper" class="hide">
+        <div id="mdc-slider-volume" class="mdc-slider" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100"
+          aria-valuenow="100" aria-label="Select Volume Level">
+          <div class="mdc-slider__track-container">
+            <div class="mdc-slider__track"></div>
+          </div>
+          <div class="mdc-slider__thumb-container">
+            <svg class="mdc-slider__thumb" width="21" height="21">
+              <circle cx="10.5" cy="10.5" r="7.875"></circle>
+            </svg>
+            <div class="mdc-slider__focus-ring"></div>
+          </div>
+        </div>
+      </div>
+      <div id="p-expanded-vol-icons-wrapper" class="hide">
+        <button id="p-expanded-vol-min" class="mdc-icon-button material-icons">volume_mute</button>
+        <button id="p-expanded-vol-max" class="mdc-icon-button material-icons">volume_up</button>
+      </div>
+
+      <div class="p-expanded-data">
+        <img id="p-expanded-thumb" class="p-expanded-data-img" src="/assets/fatima.jpg" alt="teste">
+        <h1 id="p-expanded-title" class="p-expanded-data-title">Hacking To The Gate</h1>
+        <p id="p-expanded-description" class="p-expanded-data-description">Opening</p>
+      </div>
+      <div class="p-expanded-controls">
+        <div class="p-expanded-extra-actions">
+          <button id="p-expanded-to-home" id="to-home" class="mdc-icon-button material-icons">queue_music</button>
+          <button id="p-expanded-favorite" class="mdc-icon-button material-icons">favorite_border</button>
+          <button id="p-expanded-mute" class="mdc-icon-button material-icons">volume_up</button>
+        </div>
+        <div class="p-expanded-duration">
+          <div id="mdc-slider-duration" class="mdc-slider" tabindex="0" role="slider" aria-valuemin="0"
+            aria-valuemax="100" aria-valuenow="0" aria-label="Select Duration">
+            <div class="mdc-slider__track-container">
+              <div class="mdc-slider__track"></div>
+            </div>
+            <div class="mdc-slider__thumb-container">
+              <svg class="mdc-slider__thumb" width="21" height="21">
+                <circle cx="10.5" cy="10.5" r="7.875"></circle>
+              </svg>
+              <div class="mdc-slider__focus-ring"></div>
+            </div>
+          </div>
+          <div class="p-expanded-time-display">
+            <p id="p-expanded-time-init">--:--</p>
+            <p id="p-expanded-time-end">--:--</p>
+          </div>
+        </div>
+        <div class="p-expanded-actions">
+          <button id="p-expanded-random" class="mdc-icon-button material-icons">call_made</button>
+          <button id="p-expanded-prev" class="mdc-icon-button material-icons">skip_previous</button>
+          <button id="p-expanded-play" class="mdc-icon-button material-icons">play_arrow</button>
+          <button id="p-expanded-next" class="mdc-icon-button material-icons">skip_next</button>
+          <button id="p-expanded-loop" class="mdc-icon-button material-icons">repeat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

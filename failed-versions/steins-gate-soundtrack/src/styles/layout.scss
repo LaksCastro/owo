@@ -1,0 +1,74 @@
+@import "./tab.scss";
+@import "./carousel.scss";
+@import "./song.scss";
+
+#sg-logo{
+  padding-bottom: 22px;
+}
+.top-bar-wrapper{
+    background: $content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    *{
+        color: $color;
+    }
+}
+
+#sg-main-name{
+    &::after{
+      content: "Soundtracks";
+      position: absolute;
+      font-size: 0.6em;
+      top: 100%;
+      left: 100%;
+      letter-spacing: 1px;
+      transform: translateX(-30%);
+      color: $content-lightness;
+      font-weight: normal;
+      transition: all .2s ease-in-out;
+      padding: 4px 2px;
+      border-bottom: 2px solid transparent;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+
+      top: 100%;
+      left: 100%;
+
+      transform: translate(-30%, 24px);
+
+      transition: all .2s ease-in-out;
+      background: var(--mdc-theme-secondary);
+      
+      height: 2px;
+      width: 0px;
+    }
+    &:hover{
+      &::after{
+        color: $color;
+      }
+      &::before{
+        width: 100px;
+      }
+    }
+  }
+  .steins-gate{
+    font-size: 1.4em;
+    letter-spacing: 6px;
+  
+    // font-family: 'Rock Salt', cursive;
+    // font-family: 'Damion', cursive;
+    font-family: 'Righteous', cursive;
+    position: relative;
+  
+  }
+  .sg-main-letter{
+    text-align: center;
+    padding-left: 5px;
+    margin-right: 5px;
+     background: var(--mdc-theme-secondary);
+     color: #000;
+  }
