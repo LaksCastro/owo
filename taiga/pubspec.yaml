@@ -1,0 +1,12 @@
+name: Taiga
+description: Taiga is a Discord Bot built by me to me, to use with anything I want. Is a virtual link between me and my phone using Discord
+version: 1.0.0
+
+environment:
+  sdk: ">=2.0.0 <3.0.0"
+
+dependencies:
+  nyxx: "^0.30.0"
+  dotenv: "^2.0.0"
+  jikan: "^0.0.2"
+  http: "^0.12.1"
