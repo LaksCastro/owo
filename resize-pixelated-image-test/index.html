@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Rendering Pixelated</title>
+	<style type="text/css">
+		canvas {
+			image-rendering: pixelated;
+		}
+	</style>
+</head>
+<body>
+	<img id="source" src="./a.png">
+
+	<canvas width="300" height="300"></canvas>
+
+	<script type="text/javascript">
+		window.onload = function(){
+			const image = document.getElementById('source');
+
+			const canvas = document.getElementsByTagName("canvas")[0];
+			
+			const ctx = canvas.getContext("2d");
+			ctx.imageSmoothingEnabled = false;
+			
+			ctx.drawImage(image, 0, 0, 300, 300);
+		}
+	</script>
+</body>
+</html>
