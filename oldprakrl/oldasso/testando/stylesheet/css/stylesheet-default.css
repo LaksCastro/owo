@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+@keyframes colorAnimation {
+  0% {
+    color: #40e0d0;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: #00acc1;
+  }
+}
+
+@keyframes textIndentAnimation {
+  0% {
+    text-indent: 5px;
+  }
+  100% {
+    text-indent: -5px;
+  }
+}
+
+@keyframes toRightAnimation {
+  0% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes toBottomAnimation {
+  0% {
+    transform: translateY(16px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes toBottomAnimationAndColorAnimation {
+  0% {
+    color: black;
+    transform: translateY(16px);
+  }
+  50% {
+    color: #40e0d0;
+  }
+  100% {
+    color: #00acc1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1em;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  list-style: none;
+}
+
+b {
+  font-weight: bolder;
+}
+
+a {
+  display: block;
+  cursor: pointer;
+}
+
+a:not([target="_blank"]) {
+  text-decoration: none;
+  color: #40e0d0;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+.erro {
+  visibility: hidden;
+  color: red;
+  font-weight: bolder;
+  margin-bottom: 24px;
+}
+
+.sucess {
+  visibility: hidden;
+  color: green;
+  font-weight: bolder;
+  margin-top: 24px;
+}

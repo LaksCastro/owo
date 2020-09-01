@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100cm"
+   height="100cm"
+   viewBox="0 0 1000 1000"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="desenhando.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   inkscape:export-filename="C:\Users\Castro\Desktop\desenhando.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="8.5099895 : -24.460865 : 1"
+       inkscape:vp_y="0 : 1607.6181 : 0"
+       inkscape:vp_z="222.92161 : -24.460865 : 1"
+       inkscape:persp3d-origin="115.7158 : -104.03798 : 1"
+       id="perspective1396" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.10080625"
+     inkscape:cx="2313.561"
+     inkscape:cy="1755.5283"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="961"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="false"
+     inkscape:snap-center="false"
+     inkscape:snap-text-baseline="false"
+     units="cm" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,703)">
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#afe9dd;fill-opacity:1;stroke-width:0.35040247"
+       d="M 892.95252,81.826314 -2.446272e-7,296.99996 H 1000 Z"
+       id="path5780" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#87decd;fill-opacity:1;stroke-width:0.35040247"
+       d="M 892.58751,81.092637 H 107.41247 L -2.446272e-7,296.99996 892.95252,81.826314 Z"
+       id="path5805" />
+    <path
+       style="opacity:1;fill:#2ca089;fill-opacity:1;stroke-width:0.35040247"
+       d="M 889.89001,77.9103 773.41785,-156.2088 H 242.67636 Z"
+       id="path5819"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#37c8ab;fill-opacity:1;stroke-width:0.35040247"
+       d="M 889.89001,77.350476 242.67636,-156.76862 H 226.58214 L 107.41247,82.77212 h 785.17504 z"
+       id="path5803"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#0b2822;fill-opacity:1;stroke-width:0.35040247"
+       d="M 705.86586,-290.31398 607.04745,-488.94602 H 395.87088 Z"
+       id="path5814"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#217867;fill-opacity:1;stroke-width:0.35040247"
+       d="M 234.06924,-156.2088 H 773.41785 L 707.60492,-288.49839 Z"
+       id="path5812"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#165044;fill-opacity:1;stroke-width:0.35040247"
+       d="m 234.06924,-155.64897 473.53568,-132.28959 -1.73906,-3.49507 -309.99498,-198.63204 h -2.91836 l -166.37038,334.4167 z"
+       id="path5798"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#002b22;fill-opacity:1;stroke-width:0.35040247"
+       d="M 500,-703 392.95252,-487.82636 H 607.04745 Z"
+       id="path5775"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

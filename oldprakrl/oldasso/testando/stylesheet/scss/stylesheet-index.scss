@@ -1,0 +1,491 @@
+@import "stylesheet-default";
+
+.display-none{
+  display: none;
+}
+
+.header{
+  z-index: 15;
+  width: 100%;
+  height: 55px;
+
+  @include boxShadow(lightgrey);
+
+  padding: $dozePx;
+
+  position: fixed;
+
+  @include flexBetween();
+
+  background: white;
+
+  button{
+    color: $colorDark;
+  }
+}
+
+//====================================
+
+.foto-autor{
+  border: $borderBig $colorDark;
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  @include borderRadius(100%);
+  img{
+    @include fullSize();
+    @include imgCorte(cover, center);
+  }
+}
+.autor{
+  margin-left: $dozePx;
+  color: lightgrey;
+  font-size: 0.8em;
+
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.header-container-top{
+  top: 0;
+  justify-content: flex-start;
+}
+
+//====================================
+
+.header-container-bottom{
+  bottom: 0;
+}
+.search-form{
+  margin-left: $dozePx;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  @include flexCenter();
+}
+.input-container{
+  background: $colorQuaseWhite;
+  @include borderRadius($oitoPx);
+  width: 100%;
+  @include flexBetween();
+}
+.input-search{
+  padding: $dozePx;
+  background: transparent;
+  width: 100%;
+  min-width: 0;
+}
+.submit-icon{
+  padding: $dozePx;
+}
+.header-bars{
+  @include transition();
+
+  @include borderRadius(100%);
+  @include flexCenter();
+  padding: $dozePx;
+  margin-right: $oitoPx;
+}
+.header:last-child{
+  margin: 0;
+}
+.header-bars:hover{
+  background: $colorQuaseWhite;
+}
+
+//===========================
+
+#to-top{
+  font-size: 2em;
+
+  z-index: 10;
+  position: fixed;
+
+  top: 62.5px;
+  right: 7.5px;
+
+  width: 50px;
+  height: 50px;
+
+  background: white;
+
+  @include flexCenter();
+  display: none;
+
+  @include borderRadius(100%);
+  border: $borderNormal $colorQuaseWhite;
+  @include boxShadow(lightgrey);
+}
+.menu-container{
+  z-index: 12;
+  position: fixed;
+
+  top: 55px;
+
+  width: 0;
+  height: calc(100% - 110px);
+
+  color: black;
+
+  display: block;
+  background: white;
+
+  overflow-y: scroll;
+}
+.menu-content{
+  position: relative;
+
+  @include fullSize();
+  display: none;
+}
+.menu-content-block-container{
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+
+  @include flexAround();
+  flex-wrap: wrap;
+  align-content: space-around;
+
+  align-items: flex-start;
+}
+
+#close-menu{
+  position: fixed;
+  top: 67px;
+  left: $oitoPx / 2;
+
+  width: 50px;
+  height: 50px;
+
+  font-size: 2em;
+  padding: $dozePx;
+  @include flexCenter();
+  @include borderRadius(100%);
+
+  @include transition();
+}
+#close-menu:hover, #close-menu:active{
+  color: red;
+}
+
+.menu-content-block-content{
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  *{
+    @include transition();
+    text-align: center;
+    width: 100%;
+    padding: $vinteQuatroPx;
+  }
+  p{
+    color: lightgrey;
+  }
+  a:hover{
+    @include transform(scale(1.1));
+    color: $colorDark;
+  }
+}
+
+
+.menu-social{
+  position: fixed;
+
+  bottom: 55px;
+  width: 100%;
+  height: 65px;
+
+  z-index: 8;
+
+  display: none;
+
+  background: white;
+  border-top: $borderNormal $colorQuaseWhite;
+  a{
+    @include transition();
+    font-size: 1.4em;
+    padding: $dozePx;
+    margin-right: $oitoPx;
+    display: none;
+  }
+  a:hover{
+    color: $colorDark ;
+  }
+  a:last-child{
+    margin: 0;
+  }
+}
+#container-social{
+  @include transition();
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+
+  @include flexCenter();
+}
+//===============================
+
+.container{
+  margin-top: 55px;
+  margin-bottom: 55px;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+.hero-container{
+  width: 100%;
+  height: auto;
+  background: white;
+  @include boxShadow(lightgrey);
+
+  border-bottom: 4px solid transparent;
+  border-image: repeating-linear-gradient(to left, $colorDark, $colorNormal, $colorLight, $colorDark);
+  border-image-slice: 1;
+}
+.carousel-container-hero{
+  width: 100%;
+  height: auto;
+}
+.carousel-content{
+  @include transition();
+  background: white;
+  padding: $dozePx;
+  width: 100%;
+  height: 300px;
+}
+.carousel-content:hover, .carousel-content:active{
+  @include transform(scale(1.01) translateY(-4px));
+}
+.carousel-content-container{
+  border: $borderNormal $colorQuaseWhite;
+  width: 100%;
+  height: 100%;
+}
+.img-carousel-container{
+  position: relative;
+
+  width: 100%;
+  height: 50%;
+  @include flexCenter();
+}
+.icon-free{
+  @include borderRadius(100%);
+  position: absolute;
+  top: $oitoPx;
+  left: $oitoPx;
+  padding: $dozePx;
+  @include flexCenter();
+  width: 20px;
+  height: 20px;
+  color: #22bb33;
+}
+.carousel-img{
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  @include imgCorte(cover, center);
+}
+.carousel-text{
+  padding: $dozePx;
+  width: 100%;
+  height: 50%;
+  @include flexCenter();
+
+  flex-direction: column;
+  *{
+    text-align: center;
+  }
+  p{
+    color: lightgrey;
+  }
+  h1{
+    color: black;
+    font-weight: bolder;
+    font-size: 1.3em;
+  }
+  h2{
+    color: $colorDark;
+  }
+}
+.text-nowrap{
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+//=========================================
+
+.division-title{
+  width: 100%;
+  padding: $vinteQuatroPx;
+  font-weight: bolder;
+  font-size: 1.5em;
+  @include animation(backgroundAnimation);
+  color: white;
+  text-align: left;
+  background: $linearGradientToRight;
+  margin: $vinteQuatroPx 0;
+}
+.division-title:first-child{
+  margin-top: 0;
+}
+.artigos-container{
+  background: $colorQuaseWhite;
+
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+
+  padding: $dozePx;
+}
+.artigos-content-container{
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-around;
+}
+.artigos-content{
+  @include boxShadow(lightgrey);
+  margin-bottom: $dozePx;
+  min-height: 500px;
+}
+.icon-artigo{
+  @include borderRadius($oitoPx);
+
+  width: 100px;
+  text-align: center;
+  height: auto;
+
+  padding: $dozePx;
+  position: absolute;
+
+  color: white;
+  background: $colorNormal;
+  display: none;
+}
+.icon-artigo:nth-child(2n - 1){
+  background: $colorDark;
+}
+
+.icon-time{
+  top: $oitoPx;
+  left: $oitoPx;
+}
+.icon-tecnologia{
+  font-size: 1.5em;
+  top: $oitoPx;
+  right: $oitoPx;
+}
+.icon-nivel{
+  bottom: $oitoPx;
+  left: $oitoPx;
+
+}
+.icon-pag{
+  bottom: $oitoPx;
+  font-size: 1.5em;
+  right: $oitoPx;
+}
+.text-artigos{
+  padding: $dozePx;
+  h1{
+    padding: $oitoPx * 2;
+  }
+}
+
+
+//=================================
+
+.trending-container {
+  width: 100%;
+  height: auto;
+
+  margin-bottom: $vinteQuatroPx;
+  display: none;
+}
+.trending-content-container{
+  display: grid;
+  width: 100%;
+
+  grid-gap: $oitoPx;
+}
+
+.bloco-grande{
+  grid-area: blocoGrande;
+  background: $colorDark;
+}
+.bloco-medio{
+  grid-area: blocoMedio;
+  background: $colorNormal;
+}
+#pequeno-1{
+  grid-area: blocoPequeno1;
+  background: $colorLight;
+}
+#pequeno-2{
+  grid-area: blocoPequeno2;
+  background: deepskyblue;
+}
+
+@media screen and (min-width: 379px){
+  .icon-artigo{
+    display: block;
+  }
+  .trending-container {
+    display: block;
+  }
+  .trending-content-container{
+    height: 200px;
+    grid-template:
+            "blocoMedio blocoMedio blocoGrande" 1fr
+            "blocoPequeno1 blocoPequeno2 blocoGrande" 1fr
+          / 1fr 1fr 2fr;
+  }
+}
+@media screen and (min-width: 577px){
+  .carousel-content{
+    width: 48%;
+  }
+  .menu-content-block-content{
+    width: 48%;
+  }
+}
+@media screen and (min-width: 770px){
+  .trending-content-container{
+    height: 400px;
+    grid-template:
+            "blocoMedio blocoMedio blocoGrande" 1fr
+            "blocoPequeno1 blocoPequeno2 blocoGrande" 1fr
+          / 1fr 1fr 2fr;
+  }
+}
+@media screen and (min-width: 896px){
+}
+@media screen and (min-width: 950px){
+  .carousel-content{
+    width: 30%;
+  }
+  .menu-content-block-content{
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1200px){
+  .trending-content-container{
+    height: 600px;
+  }
+  .carousel-content{
+    width: 24%;
+  }
+
+  .menu-content-block-content{
+    width: 24%;
+  }
+}

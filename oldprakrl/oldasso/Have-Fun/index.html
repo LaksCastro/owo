@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- ESPECIFICA A CODIFICAÇÃO (DEPENDE DO PAIS) SE FOSSE NA CHINA SERIA OUTRO, NOS EUA, OUTRO TBM.. -->
+    <meta charset="UTF-8">
+
+    <!-- COLOCA O ICONE NA JANELINHA DA PAGINA DO CHROME -->
+    <link rel="icon" type="imagem/png" href="img/logo.png" />
+
+
+    <!-- STYLE SHEET LOCAL -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- ABAIXO FICA O JQUERY BIBLIOTECA -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
+    <!-- ABAIXO FICA O SCRIPT LOCAL -->
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <!-- SEU NOME É VIEWPORT: "VIEWPORT, VC VAI PEGAR O WIDTH DEVICE E VAI INICIAR COM ESCALA 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TITULO DA PAGINA -->
+    <title>Have Fun</title>
+    <!-- DESCREVE O SITE -->
+    <meta name="description" content="Site feito para meu treinamento em design responsivo">
+    <!-- APRESENTA AS "TAGS" DE BUSCA DO SITE, EU ACHO -->
+    <meta name="keywords" content="Design, responsivo, treinamento, laks">
+    <!-- AINDA N SEI -->
+    <meta name="robots" content="index, follow">
+    <!-- FALA QUAL O AUTOR -->
+    <meta name="autor" content="Laks Castro">
+
+    <!-- ABAIXO FICA O FRAMEWORK DOS ICONES FONT-AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- ABAIXO FICA O FRAMEWORK DOS ICONES -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- ABAIXO FICA O SLICK JS-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+
+    <!-- ABAIXO FICA O SLICK CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" rel="stylesheet">
+
+</head>
+<body id="body">
+
+<a href="#body" class="ancora-inicio"><i class="fas fa-angle-double-up"></i></a>
+
+
+<div class="submenu-container">
+    <div class="submenu-container-sm">
+        <h1>Minha conta <i class="fas fa-user"></i></h1>
+        <a class="submenu-link-sm" href="#">Login</a>
+        <a class="submenu-link-sm" href="#">Sign-up</a>
+
+        <h1>Assistir <i class="fas fa-play"></i></h1>
+        <a class="submenu-link-sm" href="#">Best</a>
+        <a class="submenu-link-sm" href="#">Trending</a>
+        <a class="submenu-link-sm" href="#">Populares</a>
+        <a class="submenu-link-sm" href="#">More</a>
+        <a class="submenu-link-sm" href="#">Random</a>
+
+        <h1>Notícias <i class="fas fa-fire-alt"></i></h1>
+        <a class="submenu-link-sm" href="#">Última hora</a>
+        <a class="submenu-link-sm" href="#">Temporada</a>
+        <a class="submenu-link-sm" href="#">Anunciamentos</a>
+
+        <h1>Artigos <i class="fas fa-eye"></i></h1>
+        <a class="submenu-link-sm" href="#">Curiosidades</a>
+        <a class="submenu-link-sm" href="#">Resenhas</a>
+        <a class="submenu-link-sm" href="#">Listas</a>
+
+        <h1>Redes sociais <i class="fas fa-share-alt"></i></h1>
+        <a class="submenu-link-sm" href="#">Insira o nome aqui</a>
+        <a class="submenu-link-sm" href="#">Insira o nome aqui</a>
+        <a class="submenu-link-sm" href="#">Insira o nome aqui</a>
+
+        <h1>Sobre <i class="fas fa-info-circle"></i></h1>
+        <a class="submenu-link-sm" href="#">Inspirações</a>
+        <a class="submenu-link-sm" href="#">Tecnologias utilizadas</a>
+        <a class="submenu-link-sm" href="#">API's utilizadas</a>
+        <a class="submenu-link-sm" href="#">O que nós oferecemos</a>
+        <a class="submenu-link-sm" href="#">O que nós pensamos</a>
+        <a class="submenu-link-sm" href="#">Nosso objetivo</a>
+        <a class="submenu-link-sm" href="#">Hospedagem</a>
+        <a class="submenu-link-sm" href="#">Equipe</a>
+
+        <h1>Pesuisar <i class="fas fa-search"></i></h1>
+        <a class="submenu-link-sm" href="#">Clique aqui</a>
+    </div>
+
+    <div class="submenu-container-close"></div>
+
+    <div class="submenu-container-bg">
+        <div class="submenu-content-bg" id="submenu-minha-conta">
+            <h1><i class="fas fa-user-circle submenu-content-icon"></i>Minha conta</h1>
+            <a href="#"><i class="fas fa-user submenu-content-icon"></i>Login</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Sign-up</a>
+        </div>
+        <div class="submenu-content-bg" id="submenu-assistir-animes">
+            <h1><i class="fas fa-play submenu-content-icon"></i>Assistir</h1>
+            <a href="#"><i class="fas fa-fire-alt submenu-content-icon"></i>Top</a>
+            <a href="#"><i class="far fa-char-bar submenu-content-icon"></i>Trending</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Populares</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>More</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Random</a>
+        </div>
+        <div class="submenu-content-bg" id="submenu-noticias">
+            <h1><i class="fas fa-user-circle submenu-content-icon"></i>Notícias</h1>
+            <a href="#"><i class="fas fa-user submenu-content-icon"></i>Última hora</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Temporada</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Lançamentos</a>
+        </div>
+        <div class="submenu-content-bg" id="submenu-artigos">
+            <h1><i class="fas fa-user-circle submenu-content-icon"></i>Artigos</h1>
+            <a href="#"><i class="fas fa-user submenu-content-icon"></i>Curiosidades</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Resenhas</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Listas</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Recomendações</a>
+        </div>
+        <div class="submenu-content-bg" id="submenu-redes-sociais">
+            <h1><i class="fas fa-user-circle submenu-content-icon"></i>Redes sociais</h1>
+            <a href="#"><i class="fas fa-user submenu-content-icon"></i>Pinterest</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Discord</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Youtube</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Youtube</a>
+        </div>
+        <div class="submenu-content-bg" id="submenu-info">
+            <h1><i class="fas fa-user-circle submenu-content-icon"></i>Sobre</h1>
+            <a href="#"><i class="fas fa-user submenu-content-icon"></i>Inspirações</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Tecnologias utilizadas</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>API's utilizadas</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>O que nós oferecemos</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>O que nós pensamamos</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Objetivo</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Hospedagem</a>
+            <a href="#"><i class="fas fa-user-plus submenu-content-icon"></i>Equipe</a>
+        </div>
+    </div>
+</div>
+
+
+<header class="header-container">
+    <div class="header-content-sm">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dove" class="svg-inline--fa fa-dove fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M288 167.2v-28.1c-28.2-36.3-47.1-79.3-54.1-125.2-2.1-13.5-19-18.8-27.8-8.3-21.1 24.9-37.7 54.1-48.9 86.5 34.2 38.3 80 64.6 130.8 75.1zM400 64c-44.2 0-80 35.9-80 80.1v59.4C215.6 197.3 127 133 87 41.8c-5.5-12.5-23.2-13.2-29-.9C41.4 76 32 115.2 32 156.6c0 70.8 34.1 136.9 85.1 185.9 13.2 12.7 26.1 23.2 38.9 32.8l-143.9 36C1.4 414-3.4 426.4 2.6 435.7 20 462.6 63 508.2 155.8 512c8 .3 16-2.6 22.1-7.9l65.2-56.1H320c88.4 0 160-71.5 160-159.9V128l32-64H400zm0 96.1c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16z"></path></svg>
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="header-menu-sm svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+    </div>
+    <div class="header-content-bg">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dove" class="svg-inline--fa fa-dove fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M288 167.2v-28.1c-28.2-36.3-47.1-79.3-54.1-125.2-2.1-13.5-19-18.8-27.8-8.3-21.1 24.9-37.7 54.1-48.9 86.5 34.2 38.3 80 64.6 130.8 75.1zM400 64c-44.2 0-80 35.9-80 80.1v59.4C215.6 197.3 127 133 87 41.8c-5.5-12.5-23.2-13.2-29-.9C41.4 76 32 115.2 32 156.6c0 70.8 34.1 136.9 85.1 185.9 13.2 12.7 26.1 23.2 38.9 32.8l-143.9 36C1.4 414-3.4 426.4 2.6 435.7 20 462.6 63 508.2 155.8 512c8 .3 16-2.6 22.1-7.9l65.2-56.1H320c88.4 0 160-71.5 160-159.9V128l32-64H400zm0 96.1c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16z"></path></svg>
+        <nav class="header-nav-container">
+            <a href="#submenu-minha-conta" class="header-icons"><i class="fas fa-fingerprint" title="Minha conta"></i></a>
+            <a href="#submenu-assistir-animes" class="header-icons"><i class="fas fa-play" title="Assistir"></i></a>
+            <a href="#submenu-noticias" class="header-icons"><i class="fas fa-fire-alt" title="Notícias"></i></a>
+            <a href="#submenu-artigos" class="header-icons"><i class="fas fa-eye" title="Artigos"></i></a>
+            <a href="#submenu-redes-sociais" class="header-icons"><i class="fas fa-share" title="Redes sociais"></i></a>
+            <a href="#submenu-info" class="header-icons"><i class="fas fa-info-circle" title="Sobre"></i></a>
+        </nav>
+        <span class="header-icons header-lupa"><i class="fas fa-search"></i></span>
+    </div>
+</header>
+
+<div class="hero-container">
+    <div class="hero-background">
+        <img class="hero-img" src="img/hero.jpg" alt="Hero Image">
+        <div class="hero-filter"></div>
+        <form action="" method="post" class="hero-form">
+            <div class="hero-input-container">
+                <i class="fas fa-search hero-icon"><input type="submit" class="hero-submit" title="pesquisar" value="" name="pesquisa" placeholder=""></i>
+                <input type="text" class="hero-input" title="Pesquise" value="" name="pesquisa" placeholder="Pesquise" required>
+            </div>
+        </form>
+
+        <i class="hero-search-icon fas fa-search"></i>
+        <a href="#assistir" class="hero-button">Start! <i class="fas fa-play"></i></a>
+        <i class="fas fa-arrow-down hero-arrow-down"></i>
+
+        <div class="hero-lado">
+            <h1>Título Top</h1>
+            <p>Textinho bem pequeno porém bastante legal que pode ser lido sem pressa que tá suave.</p>
+        </div>
+        <div class="hero-lado">
+            <img src="img/hero.jpg" alt="Hero Image">
+        </div>
+    </div>
+</div>
+
+<main class="main-container">
+
+    <h1 id="assistir" class="main-title">
+        Assista
+        <i class="fas fa-play"></i>
+        <span class="border-animated"></span>
+    </h1>
+    <h1 class="main-subtitle">
+        Top
+        <i class="fas fa-play"></i>
+    </h1>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+
+    <h1 class="main-subtitle">
+        Trending
+        <i class="fas fa-fire-alt"></i>
+    </h1>
+    <div class="carousel-container-card carousel">
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+               <div class="spanIcone"><i class="fas fa-play"></i></div> 
+               <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+               <div class="spanIcone"><i class="fas fa-play"></i></div> 
+               <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+    </div>
+    <div class="carousel-container-card carousel">
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+               <div class="spanIcone"><i class="fas fa-play"></i></div> 
+               <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+    </div>
+
+    <h1 class="main-subtitle">
+        Populares
+        <i class="fas fa-comments"></i>
+    </h1>
+    <div class="carousel-container-card carousel">
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+    </div>
+    <div class="carousel-container-card carousel">
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+    </div>
+
+    <h1 class="main-subtitle">
+        More
+        <i class="fas fa-comments"></i>
+    </h1>
+    <div class="carousel-container-card carousel">
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+    </div>
+    <div class="carousel-container-card carousel">
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+               <div class="spanIcone"><i class="fas fa-play"></i></div> 
+               <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+               <div class="spanIcone"><i class="fas fa-play"></i></div> 
+               <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+    </div>
+
+    <h1 class="main-subtitle">
+        Random
+        <i class="fas fa-comments"></i>
+    </h1>
+    <div class="carousel-container-card carousel">
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+               <div class="spanIcone"><i class="fas fa-play"></i></div> 
+               <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+               <div class="spanIcone"><i class="fas fa-play"></i></div> 
+               <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+    </div>
+    <div class="carousel-container-card carousel">
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Akame Ga Kill</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/akame-ga-kill-cap.jpg" alt="Akame Ga Kill">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Shingeki No Kyojin</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/shingeki-cap.jpg" alt="Shingeki No Kyojin">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+               <div class="spanIcone"><i class="fas fa-play"></i></div> 
+               <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Steins;Gate</h1>
+            <div class="container-img-card">
+               <div class="spanIcone"><i class="fas fa-play"></i></div> <img class="img-card" src="img/steins-gate-capa.jpg" alt="Steins;Gate">
+            </div>
+        </a>
+        <a href="#" class="container-card slide">
+            <h1 class="name-card">Kimitsu no Yaba</h1>
+            <div class="container-img-card">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img class="img-card" src="img/kimitsu-no-yaba-cap.jpg" alt="Kimitsu no Yaba">
+            </div>
+        </a>
+    </div>
+
+
+
+    <h1 id="noticias" class="main-title">
+        Notícias
+        <i class="fas fa-play"></i>
+        <span class="border-animated"></span>
+    </h1>
+    <h1 class="main-subtitle">
+        Últimas
+        <i class="fas fa-play"></i>
+    </h1>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+
+    <h1 class="main-subtitle">
+        Temporada
+        <i class="fas fa-fire-alt"></i>
+    </h1>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+
+    <h1 class="main-subtitle">
+        Anunciamentos
+        <i class="fas fa-comments"></i>
+    </h1>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+
+
+
+    <h1 id="artigos" class="main-title">
+        Artigos
+        <i class="fas fa-play"></i>
+        <span class="border-animated"></span>
+    </h1>
+    <h1 class="main-subtitle">
+        Resenhas
+        <i class="fas fa-play"></i>
+    </h1>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+
+    <h1 class="main-subtitle">
+        Curiosidades
+        <i class="fas fa-fire-alt"></i>
+    </h1>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+
+    <h1 class="main-subtitle">
+        Top 10
+        <i class="fas fa-comments"></i>
+    </h1>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+
+    <h1 class="main-subtitle">
+        Recomendaçoes
+        <i class="fas fa-comments"></i>
+    </h1>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda  Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertid Maior Que A Outra</p>
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <p class="legenda">Legenda Divertida Porém Maior Que A Outra</p>
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+
+</main>
+
+<div class="banner-container">
+    <h1 id="sobre-nos" class="main-title">
+        Sobre nós
+        <i class="fas fa-play"></i>
+        <span class="border-animated"></span>
+    </h1>
+    <div class="carousel-container carousel">
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-5.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <h1 class="titulo">Título do objeto, muito a mostrar, mas mostra  que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto e pode ser , anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-4.jpg" alt="a-5">
+            </div>
+            <div class="content">
+                <h1 class="titulo">Título do obormal sem muito a mostrar, mas  mais que a antecedente</h1>
+                <p class="resumo">mais sobre o objeto acima que pode ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+        <a href="#" class="slide">
+            <div class="img">
+                <div class="spanIcone"><i class="fas fa-play"></i></div>
+                <img src="img/a-6.gif" alt="a-5">
+            </div>
+            <div class="content">
+                <h1 class="titulo">Título do objeto, normal sem  a mostrar, mas mostra mais que a antecedente</h1>
+                <p class="resumo">Legendadescrevendo mais sobre o objeto acima que  ser notícia, anime, artigo, etc. E assim pega o interesse do leitor.</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="redes-container">
+    <a href="#"><i class="fab fa-youtube" id="youtube"></i></a>
+    <a href="#"><i class="fab fa-twitter" id="twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f" id="facebook"></i></a>
+    <a href="#"><i class="fas fa-share-alt" id="share"></i></a>
+</div>
+
+<div class="newsletter-container">
+
+    <form class="newsletter-form" action="" method="post">
+        <h1 class="newsletter-text-center">Newsletter</h1>
+        <p class="newsletter-text-center">Assine isto por isso e isso e entao seja feliz nem sei oq to escrevendo heuheu so troxa</p>
+        <div class="container-input rtl">
+            <input class="container-input-input" type="text" required placeholder="Name" name="name" title="Name" value="">
+            <i class="far fa-envelope container-input-icon"></i>
+        </div>
+        <div class="container-input ltr">
+            <i class="far fa-user container-input-icon"></i>
+            <input class="container-input-input" type="email" required placeholder="E-mail" name="email" title="E-mail" value="">
+        </div>
+        <input class="newsletter-submit" type="submit" required placeholder="" name="email" title="Name" value="Go!">
+    </form>
+</div>
+
+<div class="autor-container">
+    <img src="img/autor.png" alt="Autor Foto">
+    <p>By Laks</p>
+</div>
+
+<div class="footer-container">
+
+    <div class="footer-block">
+        <h1>Título 1</h1>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <i class="fab fa-500px"></i>
+    </div>
+
+    <div class="footer-block">
+        <h1>Título 1</h1>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <i class="fab fa-500px"></i>
+    </div>
+
+    <div class="footer-block">
+        <h1>Título 1</h1>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <i class="fab fa-500px"></i>
+    </div>
+
+    <div class="footer-block">
+        <h1>Título 1</h1>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <i class="fab fa-500px"></i>
+    </div>
+
+    <div class="footer-block">
+        <h1>Título 1</h1>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <i class="fab fa-500px"></i>
+    </div>
+
+    <div class="footer-block">
+        <h1>Título 1</h1>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <a href="#"><p>Link 1</p></a>
+        <i class="fab fa-500px"></i>
+    </div>
+
+    <div class="footer-end">Made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+$colorDark: #00acc1;
+$colorNormal: #40e0d0;
+$colorLight: #4dd0e1;
+
+$colorQuaseWhite: rgb(245, 245, 245);
+$colorQuaseBlack: rgba(0, 0, 0, 0.5);
+
+$oitoPx: 8px;
+$dozePx: 12px;
+$vinteQuatroPx: 24px;
+$trintaSeisPx: 36px;
+
+$linearGradientToLeft: linear-gradient(to left, $colorDark, $colorNormal);
+$linearGradientToRight: linear-gradient(to right, $colorDark, $colorNormal);
+
+$boxShadow: 0 1px 20px;
+$boxShadowEspecial: 20px 20px 50px rgba($colorNormal, 0.5);
+
+$transitionDefault: all 200ms ease-in-out;
+
+
+$borderSm: 0.5px solid;
+$borderNormal: 1px solid;
+$borderBig: 2px solid;
+$borderXBig: 3.5px solid;
+
+
+$typeAnimation: ease-in-out;
+
+$animation: 1s $typeAnimation 0s infinite alternate;
+
+@mixin transition(){
+  -webkit-transition: $transitionDefault;
+  -moz-transition: $transitionDefault;
+  -ms-transition: $transitionDefault;
+  -o-transition: $transitionDefault;
+  transition: $transitionDefault;
+}
+@mixin boxShadow($color){
+  -webkit-box-shadow: $boxShadow $color;
+  -moz-box-shadow: $boxShadow $color;
+  box-shadow: $boxShadow $color;
+}
+@mixin boxShadowEspecial(){
+  -webkit-box-shadow: $boxShadowEspecial;
+  -moz-box-shadow: $boxShadowEspecial;
+  box-shadow: $boxShadowEspecial;
+}
+@mixin borderRadius($tamanho){
+  -webkit-border-radius: $tamanho;
+  -moz-border-radius: $tamanho;
+  border-radius: $tamanho;
+}
+@mixin transform($value){
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}
+@mixin imgCorte($fit, $position){
+  object-fit: $fit;
+  object-position: $position;
+}
+@mixin animation($nameAnimation){
+  animation: $nameAnimation $animation;
+}
+
+
+
+@keyframes colorAnimation {
+  0% {
+    color: $colorNormal;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: $colorDark;
+  }
+}
+
+@keyframes textIndentAnimation {
+  0% {
+    text-indent: 5px;
+  }
+  100% {
+    text-indent: -5px;
+  }
+}
+
+@keyframes toRightAnimation {
+  0% {
+    @include transform(translateX(10px));
+  }
+  100% {
+    @include transform(translateX(-10px));
+  }
+}
+
+
+@keyframes toBottomAnimation {
+  0% {
+    transform: translateY(16px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes toBottomAnimationAndColorAnimation {
+  0% {
+    color: black;
+    transform: translateY(16px);
+  }
+  50% {
+    color: $colorNormal;
+  }
+  100% {
+    color: $colorDark;
+    transform: translateY(0);
+  }
+}
+
+@mixin backgroundPontilhado() {
+  background: radial-gradient(rgb(245, 245, 245), white);
+  -webkit-background-image: -webkit-repeating-radial-gradient(rgb(245, 245, 245), white);
+  -moz-background-image: -moz-radial-gradient(rgb(245, 245, 245), white);
+  -o-background-image: -o-radial-gradient(rgb(245, 245, 245), white);
+
+  background-size: 5px 5px;
+  -webkit-background-size: 5px 5px;
+  -moz-background-size: 5px 5px;
+  -o-background-size: 5px 5px;
+}
+
+@mixin fullSize() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexAround() {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flexBetween() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font-size: 1em;
+
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+
+  list-style: none;
+}
+
+b {
+  font-weight: bolder;
+}
+
+a {
+  display: block;
+  cursor: pointer;
+}
+
+a:not([target="_blank"]) {
+  text-decoration: none;
+  color: $colorNormal;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+.erro {
+  visibility: hidden;
+  color: red;
+  font-weight: bolder;
+  margin-bottom: $vinteQuatroPx;
+}
+
+.sucess {
+  visibility: hidden;
+  color: green;
+  font-weight: bolder;
+  margin-top: $vinteQuatroPx;
+}

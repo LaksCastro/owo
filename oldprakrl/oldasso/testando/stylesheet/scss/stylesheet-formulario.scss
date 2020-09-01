@@ -1,0 +1,203 @@
+@import "stylesheet-default";
+
+
+html,
+body{
+  @include fullSize();
+  min-height: 100vh;
+}
+
+.viewport{
+  width: 100%;
+  height: 100%;
+
+  background: white;
+
+  min-height: 100vh;
+}
+.container{
+  position: relative;
+
+  min-height: 100%;
+  height: auto;
+
+  @include flexCenter();
+  flex-direction: column;
+  justify-content: center;
+
+  padding: $vinteQuatroPx;
+
+  *{
+    @include borderRadius($vinteQuatroPx);
+  }
+}
+.icon{
+  margin: $trintaSeisPx 0;
+  color: $colorNormal;
+  font-size: 4em;
+  @include animation(colorAnimation);
+}
+
+//====================
+
+.buttons-container{
+  width: 100%;
+  max-height: 10%;
+  li{
+    display: block;
+  }
+  a{
+    margin-bottom: $trintaSeisPx;
+    padding: $oitoPx * 2;
+    text-align: center;
+  }
+}
+.button-link{
+  @include transition();
+
+  border: $borderNormal $colorQuaseWhite;
+  font-weight: bolder;
+}
+.button-link:hover, .button-link:active{
+  filter: grayscale(100%);
+}
+#cadastro{
+  border: none;
+  background: $colorNormal;
+  color: white;
+}
+.float-left{
+  width: 100%;
+
+  @include flexCenter();
+
+  a{
+    @include flexCenter();
+    width: 50px;
+    height: 50px;
+
+    background: white;
+
+    border: $borderNormal $colorQuaseWhite;
+
+
+    @include transition();
+
+    @include borderRadius(100%);
+  }
+  a:hover{
+    background: $colorNormal;
+    color: white;
+  }
+  li{
+    margin-right: $dozePx;
+  }
+  li:last-child{
+    margin: 0;
+  }
+}
+
+//=====================
+
+#account-login{
+  display: none;
+}
+.title{
+  @include animation(colorAnimation);
+
+  padding: $oitoPx * 2;
+  margin: $trintaSeisPx * 2 0 $trintaSeisPx 0;
+
+  color: $colorNormal;
+  font-size: 2em;
+  font-weight: bolder;
+
+  @include flexCenter();
+  width: 100%;
+}
+.icon-pass{
+  cursor: pointer;
+}
+.back-container{
+  @include borderRadius(0);
+
+  background: white;
+
+  @include animation(textIndentAnimation);
+  cursor: pointer;
+  width: 100%;
+  padding: $oitoPx * 2;
+
+  color: $colorNormal;
+
+  @include boxShadow(lightgrey);
+
+  font-size: 2em;
+  position: fixed;
+  top: 0;
+}
+
+.account-form{
+  label{
+    width: 100%;
+    margin-bottom: $dozePx;
+  }
+
+  @include flexBetween();
+  flex-direction: column;
+
+  width: 100%;
+  height: auto;
+
+  padding: $oitoPx * 2;
+
+}
+.input-container{
+  transition: $transitionDefault;
+
+
+  border: $borderNormal $colorQuaseWhite;
+
+  width: 100%;
+
+  margin-bottom: $trintaSeisPx;
+  @include flexBetween();
+}
+.input-icon{
+  color: $colorNormal;
+  padding: $oitoPx * 2;
+}
+.input{
+  width: 100%;
+  min-width: 0;
+  padding: $oitoPx * 2;
+  background: transparent;
+}
+.esqueci-senha{
+  font-size: 0.95em;
+  width: 100%;
+  text-align: left;
+  margin-bottom: $trintaSeisPx;
+}
+.submit{
+  @include boxShadowEspecial();
+
+  font-size: 1.2em;
+  width: 100%;
+  padding: $oitoPx * 2;
+  background: turquoise;
+  color: white;
+  font-weight: bolder;
+}
+
+//=====================================================
+
+#account-cadastro{
+  display: none;
+}
+
+@media screen and (max-width: 320px){
+  .container{
+    padding: $oitoPx;
+  }
+}
