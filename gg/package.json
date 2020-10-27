@@ -1,0 +1,15 @@
+{
+  "name": "gg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "crawler": "^1.2.2",
+    "google": "^2.1.0",
+    "google-it": "^1.5.2"
+  },
+  "scripts": {
+    "i": "node index"
+  }
+}
