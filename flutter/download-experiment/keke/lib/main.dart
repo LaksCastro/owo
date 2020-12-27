@@ -137,7 +137,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
       c.addListener(() {
         if (c.offset >=
-            c.position.maxScrollExtent - MediaQuery.of(context).size.width) {
+            c.position.maxScrollExtent -
+                MediaQuery.of(context).size.width * 4) {
           _fetchMore();
         }
       });
