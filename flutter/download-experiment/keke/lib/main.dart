@@ -4,6 +4,7 @@ import 'dart:isolate';
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dio/dio.dart';
 import 'package:download_path/download_path.dart';
 import 'package:flutter/material.dart';
@@ -49,10 +50,11 @@ class MyHomePage extends StatefulWidget with WidgetsBindingObserver {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _imageStreamController = StreamController<String>.broadcast();
+  final _imageStreamController = StreamController<List<String>>.broadcast();
 
   static final _dio = Dio(BaseOptions(baseUrl: 'https://nekobot.xyz/api'));
-  static final _random = Random();
+
+  final c = ScrollController();
 
   static const _cats = [
     "hass",
@@ -84,23 +86,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   var _selectedCat = _cats.last;
 
-  static final _randomInt = (int min, int max) =>
-      ((_random.nextDouble() * (max - min)) + min).toInt();
-
-  final _scrollController = ScrollController();
-
   var _fetching = false;
   final List<String> _images = [];
-
-  void _scrollListener() {
-    final fetchMore = _scrollController.offset >=
-        _scrollController.position.maxScrollExtent /
-            MediaQuery.of(context).size.height;
-
-    if (fetchMore) {
-      _fetchMore();
-    }
-  }
 
   void _fetchMore() async {
     if (_fetching) {
@@ -109,12 +96,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
     _fetching = true;
 
+    final images = <String>[];
+
     try {
       for (var i = 0; i < 5; i++) {
         final res = await _dio.get('/image?type=' + _selectedCat);
 
-        _imageStreamController.add(res.data['message']);
+        images.add(res.data['message']);
       }
+
+      _imageStreamController.add(images);
     } catch (e) {} finally {
       _fetching = false;
     }
@@ -122,8 +113,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // DOWNLOADASSSSSSSSSS
 
-  List<_TaskInfo> _tasks;
-  List<_ItemHolder> _items;
   bool _isLoading;
   bool _permissionReady;
   String _localPath;
@@ -142,13 +131,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
       _prepare();
 
-      _imageStreamController.stream.listen((newImage) {
-        _images.add(newImage);
+      _imageStreamController.stream.listen((newImages) {
+        _images.addAll(newImages);
+      });
+
+      c.addListener(() {
+        if (c.offset >=
+            c.position.maxScrollExtent - MediaQuery.of(context).size.width) {
+          _fetchMore();
+        }
       });
 
       _fetchMore();
-
-      _scrollController.addListener(_scrollListener);
     } catch (e) {
       print('relaxa, n existe erro se o ele nao aparecer - stonks - ' + e);
     }
@@ -158,7 +152,6 @@ class _MyHomePageState extends State<MyHomePage> {
   void dispose() {
     _unbindBackgroundIsolate();
 
-    _scrollController.dispose();
     _imageStreamController.close();
 
     super.dispose();
@@ -166,30 +159,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _bindBackgroundIsolate() {
     bool isSuccess = IsolateNameServer.registerPortWithName(
-        _port.sendPort, 'downloader_send_port');
+      _port.sendPort,
+      'downloader_send_port',
+    );
+
     if (!isSuccess) {
       _unbindBackgroundIsolate();
       _bindBackgroundIsolate();
       return;
     }
-    _port.listen((dynamic data) {
-      if (debug) {
-        print('UI Isolate Callback: $data');
-      }
-      String id = data[0];
-      DownloadTaskStatus status = data[1];
-      int progress = data[2];
-
-      if (_tasks != null && _tasks.isNotEmpty) {
-        final task = _tasks.firstWhere((task) => task.taskId == id);
-        if (task != null) {
-          setState(() {
-            task.status = status;
-            task.progress = progress;
-          });
-        }
-      }
-    });
   }
 
   void _unbindBackgroundIsolate() {
@@ -236,15 +214,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: CircularProgressIndicator(),
               )
             : _permissionReady
-                ? CustomScrollView(
-                    controller: _scrollController,
-                    slivers: [
-                      ListWidget(
-                        requestDownload: _requestDownload,
-                        stream: _imageStreamController.stream,
-                        items: _images,
-                      ),
-                    ],
+                ? StreamBuilder(
+                    initialData: [],
+                    stream: _imageStreamController.stream,
+                    builder: (_, __) {
+                      return ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        controller: c,
+                        itemBuilder: (_, i) {
+                          return Keke(
+                            imageUrl: _images[i],
+                            requestDownload: _requestDownload,
+                          );
+                        },
+                        itemCount: _images.length,
+                      );
+                    },
                   )
                 : _buildNoPermissionWarning(),
       ),
@@ -316,34 +301,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<Null> _prepare() async {
-    final tasks = await FlutterDownloader.loadTasks();
-
-    int count = 0;
-    _tasks = [];
-    _items = [];
-
-    _items.add(_ItemHolder(name: 'Videos'));
-    for (int i = count; i < _tasks.length; i++) {
-      _items.add(_ItemHolder(name: _tasks[i].name, task: _tasks[i]));
-      count++;
-    }
-
-    tasks?.forEach((task) {
-      for (_TaskInfo info in _tasks) {
-        if (info.link == task.url) {
-          info.taskId = task.taskId;
-          info.status = task.status;
-          info.progress = task.progress;
-        }
-      }
-    });
-
     _permissionReady = await _checkPermission();
 
     _localPath = await _getDownloadPath();
 
     final savedDir = Directory(_localPath);
+
     bool hasExisted = await savedDir.exists();
+
     if (!hasExisted) {
       savedDir.create();
     }
@@ -358,46 +323,38 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class ListWidget extends StatelessWidget {
-  final List<String> items;
-  final Stream<String> stream;
+class Keke extends StatelessWidget {
   final Function requestDownload;
+  final String imageUrl;
 
-  const ListWidget({
-    Key key,
-    this.items,
-    this.stream,
-    @required this.requestDownload,
-  }) : super(key: key);
+  const Keke({@required this.imageUrl, @required this.requestDownload});
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<String>(
-      stream: stream,
-      builder: (_, __) {
-        return SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (context, i) {
-              return GestureDetector(
-                onTap: () {
-                  requestDownload(
-                    _TaskInfo(
-                      link: items[i],
-                      name: items[i]
-                          .replaceAll('.', '')
-                          .replaceAll('/', '')
-                          .replaceAll('_', '')
-                          .replaceAll('-', ''),
-                    ),
-                  );
-                },
-                child: Image.network(items[i]),
-              );
-            },
-            childCount: items.length,
+    return GestureDetector(
+      onTap: () {
+        requestDownload(
+          _TaskInfo(
+            link: imageUrl,
+            name: imageUrl
+                .replaceAll('.', '')
+                .replaceAll('/', '')
+                .replaceAll('_', '')
+                .replaceAll('-', ''),
           ),
         );
       },
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        alignment: Alignment.center,
+        child: CachedNetworkImage(
+          imageUrl: imageUrl,
+          alignment: Alignment.center,
+          fit: BoxFit.contain,
+          placeholder: (_, __) => CircularProgressIndicator(),
+          errorWidget: (_, __, ___) => Icon(Icons.error),
+        ),
+      ),
     );
   }
 }

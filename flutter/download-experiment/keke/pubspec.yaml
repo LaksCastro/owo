@@ -25,6 +25,7 @@ dependencies:
   path_provider: ^1.6.11
   permission_handler: ^5.0.1+1
   flutter_downloader: ^1.5.2
+  cached_network_image:
   download_path:
     path: ../download_path
   flutter:
