@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a137a57a-c00c-43ce-b597-d8d4b22d3cae" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_API_30_x86]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mFrKjlLX9CGweVgz4Kzc9wlXHA" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a137a57a-c00c-43ce-b597-d8d4b22d3cae" name="Default Changelist" comment="" />
+      <created>1609100117881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609100117881</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1239" height="263" key="GridCell.Tab.0.bottom" timestamp="1609101098973">
+      <screen x="-1280" y="-303" width="1280" height="984" />
+    </state>
+    <state width="1239" height="263" key="GridCell.Tab.0.bottom/0.0.1280.680/-1280.-303.1280.984@-1280.-303.1280.984" timestamp="1609101098973" />
+    <state width="1239" height="263" key="GridCell.Tab.0.center" timestamp="1609101098973">
+      <screen x="-1280" y="-303" width="1280" height="984" />
+    </state>
+    <state width="1239" height="263" key="GridCell.Tab.0.center/0.0.1280.680/-1280.-303.1280.984@-1280.-303.1280.984" timestamp="1609101098973" />
+    <state width="1239" height="263" key="GridCell.Tab.0.left" timestamp="1609101098973">
+      <screen x="-1280" y="-303" width="1280" height="984" />
+    </state>
+    <state width="1239" height="263" key="GridCell.Tab.0.left/0.0.1280.680/-1280.-303.1280.984@-1280.-303.1280.984" timestamp="1609101098973" />
+    <state width="1239" height="263" key="GridCell.Tab.0.right" timestamp="1609101098973">
+      <screen x="-1280" y="-303" width="1280" height="984" />
+    </state>
+    <state width="1239" height="263" key="GridCell.Tab.0.right/0.0.1280.680/-1280.-303.1280.984@-1280.-303.1280.984" timestamp="1609101098973" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1609112675773">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/-1280.-303.1280.984@0.0.1280.680" timestamp="1609112675773" />
+  </component>
+</project>
